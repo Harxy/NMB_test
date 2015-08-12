@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  root to: 'api/jobseekers#index'
   namespace :api do
-  root to: 'jobseekers#index'
   resources :jobseekers
+  resources :jobs
+  resources :employers
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
